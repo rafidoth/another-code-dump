@@ -1,0 +1,55 @@
+#include<bits/stdc++.h> 
+using namespace std;
+typedef long long int lli;
+#define MOD 1000000007
+
+void soln(){
+    int n;
+    cin >>n ;
+    lli m;
+    cin >> m;
+    vector<int> arr(n);
+    for(int i =0; i<n;i++){
+        cin >> arr[i];
+    }
+
+    if(n==1){
+        if(arr[0] == m){
+            cout << m << endl;
+            return;
+        }else{
+            cout << 0 << endl;
+            return;
+        }
+    }
+
+    sort(arr.begin(), arr.end());
+    int q = 0;
+    int sum = 0;
+    for(int p = 0; p <n;p++){
+       sum += arr[p]; 
+       while(arr[p]-arr[s] > 1)
+    }
+    cout << ans << endl;
+}
+
+
+
+
+int main(){
+    #ifndef ONLINE_JUDGE
+      freopen("input.txt", "r", stdin);
+      freopen("output.txt", "w", stdout);
+    #endif
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int t;
+    cin >> t;
+    for(int i = 0;i<t;i++){
+        cout << "test case : " << i+1 <<endl;
+        soln();
+    }
+}
+
+

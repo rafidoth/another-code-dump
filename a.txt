@@ -1,0 +1,7 @@
+UVa
+11450 - Wedding Shopping. Abridged problem statement: Given di↵erent options for each garment (e.g., 3 shirt models, 2 belt models, 4 shoe models, . . . ) and a certain limited budget, our task is to buy one model of each garment. We cannot spend more money than the given budget, but we want to spend the maximum possible amount.
+
+The input consists of two integers 1  M  200 and 1  C  20, where M is the budget and C is the number of garments that you have to buy, followed by some information about
+the C garments. For the garment g 2 [0..C-1], we will receive an integer 1  K  20 which indicates the number of di↵erent models there are for that garment g, followed by K integers indicating the price of each model 2 [1..K] of that garment g.
+
+The output is one integer that indicates the maximum amount of money we can spend purchasing one of each garment without exceeding the budget. If there is no solution due to the small budget given to us, then simply print “no solution”.

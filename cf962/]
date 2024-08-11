@@ -1,0 +1,89 @@
+#include<bits/stdc++.h> 
+using namespace std;
+typedef long long int lli;
+#define MOD 1000000007
+
+
+
+void soln(){
+    int n,q;
+    string A,B;
+    cin >> n >> q;
+    cin >> A >> B;
+    vector<map<char,int>> pre1;
+    vector<map<char,int>> pre2;
+
+    for(int i = 0; i<n;i++){
+        char x = A[i];
+        if((int) pre1.size()==0){
+            map<char,int> tmp;
+            tmp[x]++;
+            pre1.push_back(tmp);
+            continue;
+        } 
+        map<char,int> temp = pre1.back();
+        temp[x]++;
+        pre1.push_back(temp);
+    }
+
+    for(int i = 0; i<n;i++){
+        char x = B[i];
+        if((int) pre2.size()==0){
+            map<char,int> tmp;
+            tmp[x]++;
+            pre2.push_back(tmp);
+            continue;
+        } 
+        map<char,int> temp = pre2.back();
+        temp[x]++;
+        pre2.push_back(temp);
+    }
+
+    int i = 0;
+
+    for(auto x : pre2){
+        cout << "state " << i++ <<endl;
+        for(auto pair : x){
+            cout << pair.first << " "  << pair.second << endl;
+        }
+    }
+    while(q--){
+        int l,r;
+        cin >> l >> r;
+        int ans = 0;
+        for(int i = 0 ; i<26; i++){
+            char x = 'a' + i;
+            if(pre1[x]>0){
+                // get count of x in range [L,R]
+                int cntA;
+                if(l!=0) cntA = pre1[r][x] - pre1[l-1][x];
+                else cntA = pre1[r][x];
+                
+                int cntB;
+                if(l!=0) cntB = pre2[r][x] - pre1[l-1][x];
+                else cntB = pre1[r][x];
+                
+
+            }
+        }
+    }
+}
+
+
+int main(){
+    #ifndef ONLINE_JUDGE
+      freopen("input.txt", "r", stdin);
+      freopen("output.txt", "w", stdout);
+    #endif
+
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int t;
+    cin >> t;
+    for(int tc= 0; tc < t; tc++){
+        cout << "test case " << tc << endl;
+        soln();
+    }
+
+}
+
