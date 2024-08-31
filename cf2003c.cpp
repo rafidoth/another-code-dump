@@ -4,7 +4,6 @@ using namespace std;
 typedef long long int lli;
 typedef unsigned long long int uli;
 #define MOD 1000000007
-//PMAK-66cca1e137521a0001c941c1-395f6b652e8799f647127706059573f59d
 int cnt[30];
 
 void f(){
