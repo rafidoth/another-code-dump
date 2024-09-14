@@ -5,11 +5,6 @@ typedef long long int lli;
 
 
 int main(){
-    // int t; 
-    // cin >> t;
-    // for(int i = 0; i<t; i++){
-    //     cout << t*5 << endl;
-    // }
-    cout << "hello world " << endl;
+  cout << "hello world" << endl;
 }
 

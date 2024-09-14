@@ -12,7 +12,7 @@ typedef long long int lli;
 int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    
+    cout << "hello world" << endl;  
     int n;
     cin >> n;
     for(int i =0; i<n;i++){
